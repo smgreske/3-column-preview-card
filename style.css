@@ -1,0 +1,149 @@
+
+/* Custom Properties */
+:root {
+  --color-primary-1:hsl(31, 77%, 52%);
+  --color-primary-2:hsl(184, 100%, 22%);
+  --color-primary-3:hsl(179, 100%, 13%);
+
+  --color-neutral-1:hsla(0, 0%, 100%, 0.75);
+  --color-neutral-2:hsl(0, 0%, 95%);
+
+
+  --font-family-1:"Lexend Deca";
+  --font-family-2:"Big Shoulders Display";
+
+  --font-size-1:.9375rem;
+  --font-size-2:2.5rem;
+
+  --line-height-1:1.5rem;
+  --line-height-2:3rem;
+ 
+  --font-weight-1:400;
+  --font-weight-2:700;
+ 
+  --margin-mobile:1.5rem;
+}
+
+/* Reset */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0 
+}
+
+/* Utility Classes */
+
+.background-1 {
+  background-color: var(--color-primary-1);
+}
+.background-2 {
+background-color: var(--color-primary-2);
+}
+.background-3 {
+  background-color: var(--color-primary-3);
+}
+
+.text-color-1 {
+  color: var(--color-primary-1);
+}
+.text-color-2 {
+  color: var(--color-primary-2);
+}
+.text-color-3 {
+  color: var(--color-primary-3);
+}
+
+/* General Styling 1x Elements */
+
+html {
+  height: 100%;
+  display: flex;
+}
+
+body {
+  color: var(--color-neutral-1);
+  font-family: var(--font-family-1);
+  font-size: var(--font-size-1);
+  font-weight: var(--font-weight-1);
+  line-height: var(--line-height-1);
+  margin: auto; 
+}
+
+main {
+  border-radius: .5rem;
+  overflow: hidden;
+
+  max-width: 57.5rem;
+  min-height: 31.25rem;
+  display:flex;
+  flex-direction: column;
+  margin: var(--margin-mobile);
+}
+
+/* General Styling Generic Elements */
+
+p {
+  margin-block: 1.5rem;
+}
+
+h2 {
+  color: var(--color-neutral-2);
+  font-family: var(--font-family-2);
+  font-size: var(--font-size-2);
+  font-weight: var(--font-weight-2);
+  line-height: var(--line-height-2);
+  text-transform: uppercase;
+}
+
+img {
+  display: block;
+  max-width: 4rem;
+  margin-bottom: 2.25rem;
+}
+/* Component Styling */
+.button {
+  background-color: var(--color-neutral-2);
+  text-decoration: none;
+  text-align: center;
+
+  max-width: 9.125rem;
+  padding: .7rem 1.5rem;
+  border-radius: 2rem;
+  border: 2px solid transparent;
+
+}
+
+.button:hover,
+.button:focus {
+  background-color: transparent;
+  color: var(--color-neutral-2);
+  border: 2px solid var(--color-neutral-2);
+  transition: background-color .5s,
+              color .5s;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  position: relative;
+}
+
+.attribution {
+  color: black;
+}
+
+
+/* Media Queries */
+
+@media (min-width: 47rem) {
+  main {
+    flex-direction: row;
+  }
+
+  .button { 
+    position: absolute;
+    left: 3rem;
+    bottom: 3rem;
+  }
+}
